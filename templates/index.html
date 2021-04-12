@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> uber ride prediction Model</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+  </head>
+  <body>
+    <<h1>Uber Weekly Ride Analysis</h1>
+
+    <form action="{{url_for('predict')}}" method="post">
+      <input type="text" name="Priceperweek" placeholder="Priceperweek" value="">
+      <input type="text" name="Population"placeholder="Population" value="">
+      <input type="text" name="Monthlyincome" placeholder="Monthlyincome" value="">
+      <input type="text" name="Averageparkingpermonth" placeholder="Averageparkingpermonth" value="">
+      <button type="submit" class="btn btn-primary btn-block btn-large"> Predict</button>
+    </form>
+
+    <br>
+    <br>
+    {{pediction_text}}
+  </body>
+</html>
